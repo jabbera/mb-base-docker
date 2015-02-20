@@ -1,6 +1,6 @@
 # Mediabrowser base includes all dependencies to make rebuilding the main mediabrowser image faster
 FROM debian:jessie
-MAINTAINER Carlos Hernandez <carlos@techbyte.ca>
+MAINTAINER Jacob Alberty <jacob.alberty@gmail.com>
 
 # Let the container know that there is no tty
 ENV DEBIAN_FRONTEND noninteractive
