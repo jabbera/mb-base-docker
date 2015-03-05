@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get -q update && \
     apt-get install -qy --force-yes locales && \
     apt-get -q clean && \
-    rm -f /var/lib/apt/lists/[!partial]*
+    rm -rf /var/lib/apt/lists/*
 
 RUN dpkg-reconfigure locales && \
     locale-gen C.UTF-8 && \
@@ -36,4 +36,4 @@ RUN apt-get -q update && \
         libmono-system-xml-linq4.0-cil libmono-system-xml4.0-cil libmono-system2.0-cil libmono-system4.0-cil libsqlite3-0 \
         libwebp5 mono-devel libsqlite3-dev sqlite3 && \
     apt-get -q clean && \
-    rm -f /var/lib/apt/lists/[!partial]*
+    rm -rf /var/lib/apt/lists/*
